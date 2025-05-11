@@ -2,8 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>Приложению нужен доступ к локальной сети для работы с мультикаст-сообщениями</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Dark</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BeVietnamPro-Bold.ttf</string>
+		<string>BeVietnamPro-Regular.ttf</string>
+		<string>BeVietnamPro-Medium.ttf</string>
+		<string>BeVietnamPro-Black.ttf</string>
+		<string>BeVietnamPro-SemiBold.ttf</string>
+		<string>BeVietnamPro-ExtraBold.ttf</string>
+		<string>BeVietnamPro-Light.ttf</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Приложению нужен доступ к локальной сети для работы с мультикаст-сообщениями</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_upnp._tcp</string>

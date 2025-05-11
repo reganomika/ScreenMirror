@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7974C279C36565211E3C91 /* Pods_ScreenMirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */; };
 		340DB4F52DC0DA9F002FE7B7 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 340DB4F42DC0DA9F002FE7B7 /* SwiftUPnP */; };
 		340DB5982DC776C4002FE7B7 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 340DB5972DC776C4002FE7B7 /* SwiftUPnP */; };
-		D5E4FFFFE8E1C0268A75F100 /* Pods_ScreenMirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463837229A85F4F829D6209E /* Pods_ScreenMirror.framework */; };
+		3486CDB22DD0AB4100FADDE9 /* CustomBlurEffectView in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDB12DD0AB4100FADDE9 /* CustomBlurEffectView */; };
+		3486CDB52DD0AB4A00FADDE9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDB42DD0AB4A00FADDE9 /* Reachability */; };
+		3486CDB82DD0AB5500FADDE9 /* CustomNavigationView in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDB72DD0AB5500FADDE9 /* CustomNavigationView */; };
+		3486CDBB2DD0AB7200FADDE9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDBA2DD0AB7200FADDE9 /* Lottie */; };
+		3486CDBE2DD0AB8F00FADDE9 /* PremiumManager in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDBD2DD0AB8F00FADDE9 /* PremiumManager */; };
+		3486CDC12DD0ABA100FADDE9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDC02DD0ABA100FADDE9 /* SDWebImage */; };
+		3486CDC42DD0ABAA00FADDE9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDC32DD0ABAA00FADDE9 /* SnapKit */; };
+		3486CDC72DD0ABBF00FADDE9 /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDC62DD0ABBF00FADDE9 /* Utilities */; };
+		3486CDCA2DD0ABCC00FADDE9 /* StorageManager in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDC92DD0ABCC00FADDE9 /* StorageManager */; };
+		3486CDCD2DD0ABE700FADDE9 /* ShadowImageButton in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDCC2DD0ABE700FADDE9 /* ShadowImageButton */; };
+		3486CDD02DD0AC0800FADDE9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDCF2DD0AC0800FADDE9 /* FirebaseCrashlytics */; };
+		3486CDD32DD0AC2900FADDE9 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDD22DD0AC2900FADDE9 /* SwiftUPnP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenMirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.release.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.release.xcconfig"; sourceTree = "<group>"; };
 		340DB3CF2DC0C573002FE7B7 /* ScreenMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		369D92E276DEACF2A96600CB /* Pods-ScreenMirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.debug.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.debug.xcconfig"; sourceTree = "<group>"; };
-		463837229A85F4F829D6209E /* Pods_ScreenMirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenMirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF230EE09B28B9A561B5C0CD /* Pods-ScreenMirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.release.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.release.xcconfig"; sourceTree = "<group>"; };
+		C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.debug.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,30 +57,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3486CDBE2DD0AB8F00FADDE9 /* PremiumManager in Frameworks */,
+				3486CDB22DD0AB4100FADDE9 /* CustomBlurEffectView in Frameworks */,
+				3486CDD32DD0AC2900FADDE9 /* SwiftUPnP in Frameworks */,
+				3486CDBB2DD0AB7200FADDE9 /* Lottie in Frameworks */,
+				3486CDD02DD0AC0800FADDE9 /* FirebaseCrashlytics in Frameworks */,
 				340DB4F52DC0DA9F002FE7B7 /* SwiftUPnP in Frameworks */,
+				3486CDB52DD0AB4A00FADDE9 /* Reachability in Frameworks */,
 				340DB5982DC776C4002FE7B7 /* SwiftUPnP in Frameworks */,
-				D5E4FFFFE8E1C0268A75F100 /* Pods_ScreenMirror.framework in Frameworks */,
+				3486CDCA2DD0ABCC00FADDE9 /* StorageManager in Frameworks */,
+				3486CDC72DD0ABBF00FADDE9 /* Utilities in Frameworks */,
+				3486CDC12DD0ABA100FADDE9 /* SDWebImage in Frameworks */,
+				3486CDB82DD0AB5500FADDE9 /* CustomNavigationView in Frameworks */,
+				3486CDCD2DD0ABE700FADDE9 /* ShadowImageButton in Frameworks */,
+				3486CDC42DD0ABAA00FADDE9 /* SnapKit in Frameworks */,
+				1C7974C279C36565211E3C91 /* Pods_ScreenMirror.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033DE49643713E5E345BEE55 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				463837229A85F4F829D6209E /* Pods_ScreenMirror.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		340DB3C62DC0C573002FE7B7 = {
 			isa = PBXGroup;
 			children = (
 				340DB3D12DC0C573002FE7B7 /* ScreenMirror */,
 				340DB3D02DC0C573002FE7B7 /* Products */,
 				3EFE7055A4ED81019C3698C4 /* Pods */,
-				033DE49643713E5E345BEE55 /* Frameworks */,
+				FF2352806BDA3E41E161D0C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +99,18 @@
 		3EFE7055A4ED81019C3698C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				369D92E276DEACF2A96600CB /* Pods-ScreenMirror.debug.xcconfig */,
-				FF230EE09B28B9A561B5C0CD /* Pods-ScreenMirror.release.xcconfig */,
+				C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */,
+				0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF2352806BDA3E41E161D0C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,11 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340DB3E22DC0C574002FE7B7 /* Build configuration list for PBXNativeTarget "ScreenMirror" */;
 			buildPhases = (
-				00AAE30A05B1FF71D8350CE1 /* [CP] Check Pods Manifest.lock */,
+				7ACC0004633AFD0494305120 /* [CP] Check Pods Manifest.lock */,
 				340DB3CB2DC0C573002FE7B7 /* Sources */,
 				340DB3CC2DC0C573002FE7B7 /* Frameworks */,
 				340DB3CD2DC0C573002FE7B7 /* Resources */,
-				5DEA291ADFACEDDFB93FF415 /* [CP] Embed Pods Frameworks */,
+				89B2E6322728BA8C40BD2F35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,7 +163,18 @@
 			mainGroup = 340DB3C62DC0C573002FE7B7;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				340DB5962DC776C4002FE7B7 /* XCRemoteSwiftPackageReference "SwiftUPnP" */,
+				3486CDB02DD0AB4100FADDE9 /* XCRemoteSwiftPackageReference "CustomBlurEffectView" */,
+				3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
+				3486CDB62DD0AB5500FADDE9 /* XCRemoteSwiftPackageReference "CustomNavigationView" */,
+				3486CDB92DD0AB7200FADDE9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				3486CDBC2DD0AB8F00FADDE9 /* XCRemoteSwiftPackageReference "PremiumManager" */,
+				3486CDBF2DD0ABA100FADDE9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				3486CDC22DD0ABAA00FADDE9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3486CDC52DD0ABBF00FADDE9 /* XCRemoteSwiftPackageReference "Utilities" */,
+				3486CDC82DD0ABCC00FADDE9 /* XCRemoteSwiftPackageReference "StorageManager" */,
+				3486CDCB2DD0ABE700FADDE9 /* XCRemoteSwiftPackageReference "ShadowImageButton" */,
+				3486CDCE2DD0AC0800FADDE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3486CDD12DD0AC2900FADDE9 /* XCRemoteSwiftPackageReference "SwiftUPnP" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 340DB3D02DC0C573002FE7B7 /* Products */;
@@ -162,7 +197,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00AAE30A05B1FF71D8350CE1 /* [CP] Check Pods Manifest.lock */ = {
+		7ACC0004633AFD0494305120 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,7 +219,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5DEA291ADFACEDDFB93FF415 /* [CP] Embed Pods Frameworks */ = {
+		89B2E6322728BA8C40BD2F35 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,7 +251,7 @@
 /* Begin XCBuildConfiguration section */
 		340DB3E32DC0C574002FE7B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369D92E276DEACF2A96600CB /* Pods-ScreenMirror.debug.xcconfig */;
+			baseConfigurationReference = C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -253,7 +288,7 @@
 		};
 		340DB3E42DC0C574002FE7B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF230EE09B28B9A561B5C0CD /* Pods-ScreenMirror.release.xcconfig */;
+			baseConfigurationReference = 0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,6 +485,102 @@
 				kind = branch;
 			};
 		};
+		3486CDB02DD0AB4100FADDE9 /* XCRemoteSwiftPackageReference "CustomBlurEffectView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/perfectdim/CustomBlurEffectView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+		3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3486CDB62DD0AB5500FADDE9 /* XCRemoteSwiftPackageReference "CustomNavigationView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reganomika/CustomNavigationView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3486CDB92DD0AB7200FADDE9 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+		3486CDBC2DD0AB8F00FADDE9 /* XCRemoteSwiftPackageReference "PremiumManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reganomika/PremiumManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		3486CDBF2DD0ABA100FADDE9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
+		3486CDC22DD0ABAA00FADDE9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		3486CDC52DD0ABBF00FADDE9 /* XCRemoteSwiftPackageReference "Utilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reganomika/Utilities";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		3486CDC82DD0ABCC00FADDE9 /* XCRemoteSwiftPackageReference "StorageManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reganomika/StorageManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3486CDCB2DD0ABE700FADDE9 /* XCRemoteSwiftPackageReference "ShadowImageButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reganomika/ShadowImageButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
+			};
+		};
+		3486CDCE2DD0AC0800FADDE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+		3486CDD12DD0AC2900FADDE9 /* XCRemoteSwiftPackageReference "SwiftUPnP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/katoemba/SwiftUPnP";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,6 +592,66 @@
 		340DB5972DC776C4002FE7B7 /* SwiftUPnP */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 340DB5962DC776C4002FE7B7 /* XCRemoteSwiftPackageReference "SwiftUPnP" */;
+			productName = SwiftUPnP;
+		};
+		3486CDB12DD0AB4100FADDE9 /* CustomBlurEffectView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDB02DD0AB4100FADDE9 /* XCRemoteSwiftPackageReference "CustomBlurEffectView" */;
+			productName = CustomBlurEffectView;
+		};
+		3486CDB42DD0AB4A00FADDE9 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
+		};
+		3486CDB72DD0AB5500FADDE9 /* CustomNavigationView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDB62DD0AB5500FADDE9 /* XCRemoteSwiftPackageReference "CustomNavigationView" */;
+			productName = CustomNavigationView;
+		};
+		3486CDBA2DD0AB7200FADDE9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDB92DD0AB7200FADDE9 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		3486CDBD2DD0AB8F00FADDE9 /* PremiumManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDBC2DD0AB8F00FADDE9 /* XCRemoteSwiftPackageReference "PremiumManager" */;
+			productName = PremiumManager;
+		};
+		3486CDC02DD0ABA100FADDE9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDBF2DD0ABA100FADDE9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		3486CDC32DD0ABAA00FADDE9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDC22DD0ABAA00FADDE9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3486CDC62DD0ABBF00FADDE9 /* Utilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDC52DD0ABBF00FADDE9 /* XCRemoteSwiftPackageReference "Utilities" */;
+			productName = Utilities;
+		};
+		3486CDC92DD0ABCC00FADDE9 /* StorageManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDC82DD0ABCC00FADDE9 /* XCRemoteSwiftPackageReference "StorageManager" */;
+			productName = StorageManager;
+		};
+		3486CDCC2DD0ABE700FADDE9 /* ShadowImageButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDCB2DD0ABE700FADDE9 /* XCRemoteSwiftPackageReference "ShadowImageButton" */;
+			productName = ShadowImageButton;
+		};
+		3486CDCF2DD0AC0800FADDE9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDCE2DD0AC0800FADDE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		3486CDD22DD0AC2900FADDE9 /* SwiftUPnP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3486CDD12DD0AC2900FADDE9 /* XCRemoteSwiftPackageReference "SwiftUPnP" */;
 			productName = SwiftUPnP;
 		};
 /* End XCSwiftPackageProductDependency section */

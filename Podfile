@@ -8,9 +8,9 @@ target 'ScreenMirror' do
   # Pods for ScreenMirror
 pod 'CocoaUPnP'
 pod 'GCDWebServer'
-pod 'Telegraph'
-pod 'GoogleWebRTC'
-pod 'Swifter'
+#pod 'Telegraph'
+#pod 'GoogleWebRTC'
+#pod 'Swifter'
 
 end
 
