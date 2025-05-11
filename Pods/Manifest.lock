@@ -1,0 +1,61 @@
+PODS:
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - CocoaAsyncSocket (7.6.5)
+  - CocoaUPnP (3.1.0):
+    - AFNetworking/NSURLSession (~> 4)
+    - AFNetworking/Reachability (~> 4)
+    - AFNetworking/Security (~> 4)
+    - AFNetworking/Serialization (~> 4)
+    - CocoaAsyncSocket (~> 7)
+    - GCDWebServer (~> 3)
+    - Ono (~> 2)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GoogleWebRTC (1.1.32000)
+  - HTTPParserC (2.9.4)
+  - Ono (2.1.2)
+  - Swifter (1.5.0)
+  - Telegraph (0.30.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - HTTPParserC (~> 2.9)
+
+DEPENDENCIES:
+  - CocoaUPnP
+  - GCDWebServer
+  - GoogleWebRTC
+  - Swifter
+  - Telegraph
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - CocoaAsyncSocket
+    - CocoaUPnP
+    - GCDWebServer
+    - GoogleWebRTC
+    - HTTPParserC
+    - Ono
+    - Swifter
+    - Telegraph
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  CocoaUPnP: f6733371d5d57c3c55c945a1a509469e951656a4
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  GoogleWebRTC: 4d261187b30512efdb711d21fa961a6adf138717
+  HTTPParserC: aea14c3d2d4ac5beb3988781daa36dfa62e0d9ef
+  Ono: 26a7c1fc4df13ece7747560a1d80655807a8a000
+  Swifter: e71dd674404923d7f03ebb03f3f222d1c570bc8e
+  Telegraph: 12576b119324138e4929792af9e5a1085c2ecbc1
+
+PODFILE CHECKSUM: a856850e03d09d837b4860acfd19768e04c65119
+
+COCOAPODS: 1.16.2

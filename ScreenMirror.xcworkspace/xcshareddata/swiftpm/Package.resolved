@@ -1,0 +1,42 @@
+{
+  "originHash" : "83f736016a1b455470979230c448dca928c5407319303eafb2a216689782a976",
+  "pins" : [
+    {
+      "identity" : "cocoaasyncsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5ddba5e72f38e56010dbfac08b44478ee5000c0c"
+      }
+    },
+    {
+      "identity" : "swifter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/httpswift/swifter.git",
+      "state" : {
+        "branch" : "stable",
+        "revision" : "1e4f51c92d7ca486242d8bf0722b99de2c3531aa"
+      }
+    },
+    {
+      "identity" : "swiftupnp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/katoemba/SwiftUPnP",
+      "state" : {
+        "branch" : "main",
+        "revision" : "555a397c4fdf7a8a45d56872b1ada6dbb731578a"
+      }
+    },
+    {
+      "identity" : "xmlcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CoreOffice/XMLCoder.git",
+      "state" : {
+        "revision" : "b1e944cbd0ef33787b13f639a5418d55b3bed501",
+        "version" : "0.17.1"
+      }
+    }
+  ],
+  "version" : 3
+}
