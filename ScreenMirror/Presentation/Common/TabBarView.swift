@@ -7,33 +7,40 @@ protocol TabBarViewDelegate: AnyObject {
 }
 
 enum TabBarViewItemType {
-    case normal(UIImage?)
+    case tabItem(selectedImage: UIImage?, unselectedImage: UIImage?, String)
+    case centerItem(selectedImage: UIImage?, unselectedImage: UIImage?)
 }
 
 final class TabBarView: UIView {
     
     private lazy var contentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .init(hex: "353644")
-        view.layer.cornerRadius = 20
+        view.backgroundColor = .white.withAlphaComponent(0.04)
+        view.layer.cornerRadius = 40
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         return view
     }()
 
     weak var delegate: TabBarViewDelegate?
-    private var buttons: [UIStackView] = []
+    private var tabButtons: [UIView] = []
+    private var centerButton: UIView?
+    
     private let items: [TabBarViewItemType] = [
-        .normal(UIImage(named: "appsTab")),
-        .normal(UIImage(named: "remoteTab")),
-        .normal(UIImage(named: "settingsTab"))
+        .tabItem(
+            selectedImage: UIImage(named: "homeTabSelected"),
+            unselectedImage: UIImage(named: "homeTabUnselected"),
+            "home".localized
+        ),
+        .centerItem(
+            selectedImage: UIImage(named: "centerTabSelected"),
+            unselectedImage: UIImage(named: "centerTab")
+        ),
+        .tabItem(
+            selectedImage: UIImage(named: "settingsTabSelected"),
+            unselectedImage: UIImage(named: "settingsTabUnselected"),
+            "settings".localized
+        )
     ]
-
-    private lazy var tabBarStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .equalSpacing
-        return stackView
-    }()
 
     init() {
         super.init(frame: .zero)
@@ -46,64 +53,154 @@ final class TabBarView: UIView {
     }
 
     private func setupTabBarButtons() {
-        for (index, item) in items.enumerated() {
-            
-            switch item {
-            case .normal(let image):
-                
-                let view = UIView()
-                view.backgroundColor = .clear
-                view.layer.cornerRadius = 36
-                
-                view.snp.makeConstraints { make in
-                    make.height.width.equalTo(75)
-                }
-                
-                let imageView = UIImageView(image: image)
-                imageView.contentMode = .scaleAspectFit
-                
-                view.addSubview(imageView)
-                
-                imageView.snp.makeConstraints { make in
-                    make.center.equalToSuperview()
-                }
-                
-                let stackView = UIStackView(arrangedSubviews: [view])
-                stackView.axis = .vertical
-                stackView.alignment = .center
-                stackView.spacing = 4
-                stackView.tag = index
-                
-                stackView.add(target: self, action: #selector(tabButtonTapped(_:)))
-                
-                stackView.snp.makeConstraints { make in
-                    make.height.width.equalTo(75)
-                }
-                
-                tabBarStackView.addArrangedSubview(stackView)
-                
-                buttons.append(stackView)
-            }
+        if case let .tabItem(selectedImage, unselectedImage, title) = items[0] {
+            let button = createTabButton(
+                selectedImage: selectedImage,
+                unselectedImage: unselectedImage,
+                title: title,
+                tag: 0
+            )
+            contentView.addSubview(button)
+            tabButtons.append(button)
         }
-
-        updateSelectedButton(at: 1)
+        
+        if case let .centerItem(selectedImage, unselectedImage) = items[1] {
+            let button = createCenterButton(
+                selectedImage: selectedImage,
+                unselectedImage: unselectedImage,
+                tag: 1
+            )
+            addSubview(button)
+            centerButton = button
+        }
+        
+        if case let .tabItem(selectedImage, unselectedImage, title) = items[2] {
+            let button = createTabButton(
+                selectedImage: selectedImage,
+                unselectedImage: unselectedImage,
+                title: title,
+                tag: 2
+            )
+            contentView.addSubview(button)
+            tabButtons.append(button)
+        }
+        
+        updateSelectedButton(at: 0)
+    }
+    
+    private func createTabButton(
+        selectedImage: UIImage?,
+        unselectedImage: UIImage?,
+        title: String,
+        tag: Int
+    ) -> UIView {
+        let container = UIView()
+        container.tag = tag
+        
+        let imageView = UIImageView(image: unselectedImage)
+        imageView.contentMode = .scaleAspectFit
+        imageView.tag = 100
+        
+        let label = GradientLabel()
+        label.label.text = title
+        label.label.font = .font(weight: .semiBold, size: 14)
+        label.tag = 101
+        
+        container.addSubview(imageView)
+        container.addSubview(label)
+        
+        imageView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(24)
+        }
+        
+        label.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(4)
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tabButtonTapped(_:)))
+        container.addGestureRecognizer(tapGesture)
+        
+        return container
+    }
+    
+    private func createCenterButton(
+        selectedImage: UIImage?,
+        unselectedImage: UIImage?,
+        tag: Int
+    ) -> UIView {
+        let container = UIView()
+        container.tag = tag
+        
+        let buttonView = UIView()
+        buttonView.layer.cornerRadius = 41
+        buttonView.tag = 200
+        buttonView.backgroundColor = UIColor(hex: "FF4400")
+        buttonView.layer.shadowColor = UIColor(hex: "FF4400").cgColor
+        buttonView.layer.shadowOpacity = 0.25
+        buttonView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        buttonView.layer.shadowRadius = 20.5
+        
+        let imageView = UIImageView(image: unselectedImage)
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .white
+        imageView.tag = 201
+        
+        container.addSubview(buttonView)
+        buttonView.addSubview(imageView)
+        
+        buttonView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.width.height.equalTo(82)
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(82)
+        }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tabButtonTapped(_:)))
+        container.addGestureRecognizer(tapGesture)
+        
+        return container
     }
 
     private func setupLayout() {
-        addSubview(contentView)
+        insertSubview(contentView, belowSubview: centerButton!)
         
         contentView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(25)
-            make.bottom.equalToSuperview()
-            make.top.equalToSuperview().inset(17)
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalToSuperview().inset(30)
+            make.height.equalTo(104)
         }
         
-        contentView.addSubview(tabBarStackView)
+        if let leftButton = tabButtons.first {
+            leftButton.snp.makeConstraints { make in
+                make.left.equalTo(contentView).offset(50)
+                make.bottom.equalTo(contentView).offset(-40)
+                make.width.equalTo(80)
+                make.height.equalTo(50)
+            }
+        }
         
-        tabBarStackView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(40)
-            make.height.equalTo(75)
-            make.centerY.equalToSuperview()
+        if let centerButton = centerButton {
+            centerButton.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.top.equalToSuperview()
+                make.width.height.equalTo(82)
+            }
+        }
+        
+        if tabButtons.count > 1, let rightButton = tabButtons.last {
+            rightButton.snp.makeConstraints { make in
+                make.right.equalTo(contentView).offset(-50)
+                make.bottom.equalTo(contentView).offset(-40)
+                make.width.equalTo(80)
+                make.height.equalTo(50)
+            }
         }
     }
 
@@ -114,31 +211,33 @@ final class TabBarView: UIView {
     }
 
     private func updateSelectedButton(at index: Int) {
-        for (buttonIndex, item) in items.enumerated() {
-            guard case .normal(let image) = item else { continue }
 
-            let buttonStackView = buttons[buttonIndex]
+        if case let .tabItem(selectedImage, unselectedImage, _) = items[0] {
+            let button = tabButtons[0]
+            let imageView = button.viewWithTag(100) as! UIImageView
+            let label = button.viewWithTag(101) as! GradientLabel
             
-            let view = buttonStackView.arrangedSubviews[0]
-            let imageView = view.subviews.first as? UIImageView
-            
-            imageView?.image = image?.withTintColor(buttonIndex == index ? UIColor.white : UIColor.white.withAlphaComponent(0.38))
-            view.transform = buttonIndex == index ? CGAffineTransform(translationX: 0, y: -20) : .identity
-            
-            view.backgroundColor = buttonIndex == index ? UIColor.init(hex: "0055F1") : .clear
-            
-            if buttonIndex == index {
-                view.layer.shadowColor = UIColor.init(hex: "0055F1").cgColor
-                view.layer.shadowOpacity = 0.49
-                view.layer.shadowOffset = .init(width: 0, height: 6)
-                view.layer.shadowRadius = 17
-                view.layer.masksToBounds = false
+            let isSelected = index == 0
+            imageView.image = isSelected ? selectedImage : unselectedImage
+            if isSelected {
+                label.setLabelColor()
             } else {
-                view.layer.shadowColor = nil
-                view.layer.shadowOpacity = 0
-                view.layer.shadowOffset = .zero
-                view.layer.shadowRadius = 0
-                view.layer.masksToBounds = true
+                label.setLabelColor(plainColor: UIColor(hex: "959595"))
+            }
+        }
+    
+        if case let .tabItem(selectedImage, unselectedImage, _) = items[2] {
+            let button = tabButtons[1]
+            let imageView = button.viewWithTag(100) as! UIImageView
+            let label = button.viewWithTag(101) as! GradientLabel
+            
+            let isSelected = index == 2
+            imageView.image = isSelected ? selectedImage : unselectedImage
+            
+            if isSelected {
+                label.setLabelColor()
+            } else {
+                label.setLabelColor(plainColor: UIColor(hex: "959595"))
             }
         }
     }

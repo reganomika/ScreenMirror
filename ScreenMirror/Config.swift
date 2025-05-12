@@ -10,4 +10,9 @@ enum Config {
     static let appName = "Samsung Remote TV iOS App"
     static let amazonApiKey = "0987654321"
     static let debugMode = true
+    
+    static let defaultDradient: [UIColor] = [
+        UIColor(hex: "#FF8350"),
+        UIColor(hex: "#FF2227")
+    ]
 }

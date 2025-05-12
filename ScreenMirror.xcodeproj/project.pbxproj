@@ -22,12 +22,14 @@
 		3486CDCD2DD0ABE700FADDE9 /* ShadowImageButton in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDCC2DD0ABE700FADDE9 /* ShadowImageButton */; };
 		3486CDD02DD0AC0800FADDE9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDCF2DD0AC0800FADDE9 /* FirebaseCrashlytics */; };
 		3486CDD32DD0AC2900FADDE9 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDD22DD0AC2900FADDE9 /* SwiftUPnP */; };
+		3486CE532DD0B68500FADDE9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3486CE512DD0B68500FADDE9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenMirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.release.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.release.xcconfig"; sourceTree = "<group>"; };
 		340DB3CF2DC0C573002FE7B7 /* ScreenMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3486CE522DD0B68500FADDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.debug.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		340DB3C62DC0C573002FE7B7 = {
 			isa = PBXGroup;
 			children = (
+				3486CE512DD0B68500FADDE9 /* Localizable.strings */,
 				340DB3D12DC0C573002FE7B7 /* ScreenMirror */,
 				340DB3D02DC0C573002FE7B7 /* Products */,
 				3EFE7055A4ED81019C3698C4 /* Pods */,
@@ -164,7 +167,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				3486CDB02DD0AB4100FADDE9 /* XCRemoteSwiftPackageReference "CustomBlurEffectView" */,
-				3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
+				3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */,
 				3486CDB62DD0AB5500FADDE9 /* XCRemoteSwiftPackageReference "CustomNavigationView" */,
 				3486CDB92DD0AB7200FADDE9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				3486CDBC2DD0AB8F00FADDE9 /* XCRemoteSwiftPackageReference "PremiumManager" */,
@@ -191,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3486CE532DD0B68500FADDE9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +251,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3486CE512DD0B68500FADDE9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3486CE522DD0B68500FADDE9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		340DB3E32DC0C574002FE7B7 /* Debug */ = {
@@ -493,7 +508,7 @@
 				minimumVersion = 0.0.3;
 			};
 		};
-		3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+		3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
 			requirement = {
@@ -601,7 +616,7 @@
 		};
 		3486CDB42DD0AB4A00FADDE9 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			package = 3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
 		};
 		3486CDB72DD0AB5500FADDE9 /* CustomNavigationView */ = {

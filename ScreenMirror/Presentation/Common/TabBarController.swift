@@ -36,7 +36,7 @@ final class TabBarController: UIViewController {
         setupView()
         setupConstraints()
         
-        switchToViewController(viewControllers[1])
+        switchToViewController(viewControllers[0])
     }
     
     private func setupView() {
@@ -46,9 +46,8 @@ final class TabBarController: UIViewController {
     private func setupConstraints() {
         
         tabBarView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(23)
-            make.height.equalTo(92)
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(134)
         }
     }
 
