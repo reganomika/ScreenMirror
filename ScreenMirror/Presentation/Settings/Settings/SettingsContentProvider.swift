@@ -12,7 +12,6 @@ protocol SettingsOptionRepresentable {
 
 enum SettingsOption: SettingsOptionRepresentable {
     case faq
-    case shareApp
     case privacyPolicy
     case termsOfService
     case alternateIcons
@@ -20,7 +19,6 @@ enum SettingsOption: SettingsOptionRepresentable {
     var iconAsset: UIImage? {
         switch self {
         case .faq: return UIImage(named: "faq")
-        case .shareApp: return UIImage(named: "share")
         case .privacyPolicy: return UIImage(named: "privacy")
         case .termsOfService: return UIImage(named: "terms")
         case .alternateIcons: return UIImage(named: "changeIcon")
@@ -30,10 +28,9 @@ enum SettingsOption: SettingsOptionRepresentable {
     var displayTitle: String {
         switch self {
         case .faq: return "FAQ".localized
-        case .shareApp: return "Share with other".localized
         case .privacyPolicy: return "Privacy Policy".localized
         case .termsOfService: return "Terms of Use".localized
-        case .alternateIcons: return "Replace icon".localized
+        case .alternateIcons: return "Change icon".localized
         }
     }
 }
@@ -70,7 +67,6 @@ class SettingsContentProvider {
         let standardOptions: [SettingsOption] = [
             .faq,
             .alternateIcons,
-            .shareApp,
             .privacyPolicy,
             .termsOfService
         ]

@@ -100,15 +100,13 @@ extension SettingsController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch contentProvider.currentRows[indexPath.row] {
-        case .premiumPromotion: return UITableView.automaticDimension
-        case .standardOption: return 89
+        case .premiumPromotion: return 170.0
+        case .standardOption: return 89.0
         }
     }
     
     private func handleMenuOptionSelection(_ option: SettingsOption) {
         switch option {
-        case .shareApp:
-            presentShareSheet()
         case .privacyPolicy:
             presentWebView(urlString: Config.privacy)
         case .termsOfService:
@@ -118,13 +116,6 @@ extension SettingsController: UITableViewDataSource, UITableViewDelegate {
         case .faq:
             presentFaq()
         }
-    }
-    
-    private func presentShareSheet() {
-        let appStoreURL = URL(string: "https://apps.apple.com/us/app/\(Config.appId)")!
-        let activityVC = UIActivityViewController(activityItems: [appStoreURL], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = view
-        present(activityVC, animated: true)
     }
     
     private func presentWebView(urlString: String) {
@@ -142,10 +133,10 @@ extension SettingsController: UITableViewDataSource, UITableViewDelegate {
     }
     
     private func presentFaq() {
-//        present(vc: FAQController(), animated: false)
+        present(vc: FAQController(), animated: false)
     }
     
     private func presentIconSelection() {
-//        presentCrossDissolve(vc: ReplaceIconController())
+        presentCrossDissolve(vc: IconsController())
     }
 }

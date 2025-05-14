@@ -6,10 +6,10 @@ final class BaseCell: UITableViewCell {
     
     static let reuseID = "BaseCell"
     
-    private lazy var customBackgroundView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .init(hex: "353644")
-        view.layer.cornerRadius = 20
+    private lazy var customBackgroundView: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "baseCellBackground"))
+        view.layer.cornerRadius = 18
+        view.clipsToBounds = true
         return view
     }()
     
@@ -20,7 +20,7 @@ final class BaseCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .font(weight: .semiBold, size: 18)
+        label.font = .font(weight: .bold, size: 18)
         label.textColor = .white
         return label
     }()
@@ -46,9 +46,9 @@ final class BaseCell: UITableViewCell {
         customBackgroundView.addSubview(titleLabel)
         
         leftImageView.snp.makeConstraints { make in
-            make.left.equalToSuperview().inset(16)
+            make.left.equalToSuperview().inset(18)
             make.centerY.equalToSuperview()
-            make.height.width.equalTo(35)
+            make.height.width.equalTo(24)
         }
         
         customBackgroundView.snp.makeConstraints { make in
@@ -58,7 +58,7 @@ final class BaseCell: UITableViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().inset(62)
+            make.left.equalToSuperview().inset(63)
             make.right.equalToSuperview().inset(22)
             make.centerY.equalToSuperview()
         }

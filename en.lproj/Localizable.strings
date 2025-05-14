@@ -1,2 +1,87 @@
 "home" = "home";
 "settings" = "settings";
+"FAQ" = "FAQ";
+"Change icon" = "Change icon";
+"Terms of Use" = "Terms of Use";
+"Privacy Policy" = "Privacy Policy";
+"Explore premium" = "Explore premium";
+"Unlock all features" = "Unlock all features";
+"Start now" = "Start now";
+"What do you think of our app?" = "What do you think\nof our app?";
+"Tell us what you thought-we’re all ears!" = "Tell us what you\nthought-we’re all ears!";
+"Leave a review" = "Leave a review";
+"Later" = "Later";
+"How do I connect the app to my TV?" = "How do I connect the app to my TV?";
+"Devices are on the same network but can't connect" = "Devices are on the same network but can't connect";
+"I don’t have sound on the TV, what should i do?" = "I don’t have sound on the TV, what should i do?";
+"Screen mirroring doesn’t work?" = "Screen mirroring doesn’t work?";
+"faq0" = "
+1. Make sure your iPhone is connected to WI-FI
+2. Turn on your TV and ensure it’s connected to the same Wi-Fi network as your iPhone
+3. On the connection screen, select your TV’s name
+4. When prompted, tap “OK” or “Yes” to allow the app to control your TV
+";
+"faq1" = "
+1. Try turning on Airplane Mode on one device for 5 seconds, then turn it off.
+2. If that doesn’t help, restart your router and both devices.
+3. Make sure all devices are updated to the latest software version.
+4. If you have more than one Wi-Fi network, try connecting both devices to a different one and check if the app detects your TV.
+";
+"faq2" = "
+1. If you're using the broadcast feature, ensure your video has sound — it will play on the TV as well.
+2. For screen mirroring, TV sound will only work if \"Enable Sound\" is selected in the app settings when connecting to the TV.
+";
+"faq3" = "
+1. Make sure your iOS device is connected to Wi-Fi.
+2. Restart your TV by unplugging the power cord, waiting for 1 minute, then plugging it back in. Note: After turning the TV back on, it may take 30–60 seconds before it’s detectable by your device.
+3. Close and reopen the app: Swipe up from the bottom, then swipe up on the \"Screen Mirror\" preview to fully close it.
+";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";

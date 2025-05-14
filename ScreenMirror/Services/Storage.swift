@@ -16,7 +16,7 @@ final class Storage {
         set { storageManager.set(newValue, forKey: onboardingShownKey) }
     }
 
-    var wasRevviewScreen: Bool {
+    var wasReviewScreen: Bool {
         get { storageManager.get(forKey: reviewShownKey, defaultValue: false) }
         set { storageManager.set(newValue, forKey: reviewShownKey) }
     }

@@ -6,33 +6,23 @@ import Utilities
 class PremiumCell: UITableViewCell {
     static let reuseID = "PremiumCell"
     
-    private let containerView: UIView = {
-        let view = UIView()
-        view.applyDropShadow(
-            color: UIColor(hex: "0055F1"),
-            opacity: 0.61,
-            offset: CGSize(width: 0, height: 4),
-            radius: 20
-        )
-        view.backgroundColor = .init(hex: "0055F1")
-        view.layer.cornerRadius = 22
+    private let containerView: UIImageView = {
+        let view = UIImageView(image: .init(named: "promotionCellBackground"))
+        view.layer.cornerRadius = 25
+        view.clipsToBounds = true
         return view
     }()
     
-    private let rightImageView: UIImageView = {
-        UIImageView(image: UIImage(named: "rightPremiumCell"))
+    private let leftImageView: UIImageView = {
+        UIImageView(image: UIImage(named: "promotion"))
     }()
     
     private let promotionTitle: UILabel = {
         let label = UILabel()
-        
-        label.attributedText = "Unlock full control 🔓".localized.attributedString(
-            font: .font(weight: .bold, size: 24),
-            aligment: .left,
-            color:. white,
-            lineSpacing: 5,
-            maxHeight: 50
-        )
+        label.font = .font(weight: .bold, size: 20)
+        label.textAlignment = .left
+        label.textColor = .white
+        label.text = "Explore premium".localized
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -41,13 +31,10 @@ class PremiumCell: UITableViewCell {
     private let promotionSubtitle: UILabel = {
         let label = UILabel()
         
-        label.attributedText = "Get unlimited access to Universal Remote TV".localized.attributedString(
-            font: .font(weight: .semiBold, size: 16),
-            aligment: .left,
-            color: UIColor.white.withAlphaComponent(0.64),
-            lineSpacing: 5,
-            maxHeight: 30
-        )
+        label.font = .font(weight: .regular, size: 14)
+        label.textAlignment = .left
+        label.textColor = .white.withAlphaComponent(0.9)
+        label.text = "Unlock all features".localized
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -55,11 +42,11 @@ class PremiumCell: UITableViewCell {
     
     private let actionButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Upgrade 🚀".localized, for: .normal)
+        button.setTitle("Start now".localized, for: .normal)
         button.titleLabel?.font = .font(weight: .bold, size: 16)
-        button.setTitleColor(UIColor(hex: "0B0C1E"), for: .normal)
+        button.setTitleColor(UIColor(hex: "1E0404"), for: .normal)
         button.backgroundColor = .white
-        button.layer.cornerRadius = 21
+        button.layer.cornerRadius = 12
         button.applyDropShadow(
             color: .white,
             opacity: 0.6,
@@ -85,7 +72,7 @@ class PremiumCell: UITableViewCell {
         contentView.backgroundColor = .clear
         
         contentView.addSubview(containerView)
-        containerView.addSubviews(promotionTitle, promotionSubtitle, actionButton, rightImageView)
+        containerView.addSubviews(promotionTitle, promotionSubtitle, actionButton, leftImageView)
         
         containerView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview().inset(24)
@@ -102,18 +89,19 @@ class PremiumCell: UITableViewCell {
         promotionSubtitle.snp.makeConstraints {
             $0.leading.equalTo(actionButton)
             $0.width.equalTo(170)
-            $0.top.equalTo(promotionTitle.snp.bottom).offset(10)
+            $0.top.equalTo(promotionTitle.snp.bottom).offset(4)
         }
         
         actionButton.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(20)
-            $0.bottom.equalToSuperview().inset(18)
-            $0.size.equalTo(CGSize(width: 110, height: 42))
+            $0.leading.equalToSuperview().inset(159)
+            $0.bottom.equalToSuperview().inset(16)
+            $0.size.equalTo(CGSize(width: 109, height: 33))
         }
         
-        rightImageView.snp.makeConstraints { make in
-            make.right.equalToSuperview()
-            make.top.bottom.equalToSuperview()
+        leftImageView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.size.equalTo(CGSize.init(width: 147, height: 130))
         }
     }
 }

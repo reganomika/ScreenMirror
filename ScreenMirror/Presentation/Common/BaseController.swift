@@ -10,6 +10,12 @@ class BaseController: UIViewController {
         return view
     }()
     
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView(image: .init(named: "background"))
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -34,6 +40,12 @@ class BaseController: UIViewController {
     }
     
     func setupConstraints() {
+        
+        view.insertSubview(imageView, at: 0)
+        
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
         topView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
