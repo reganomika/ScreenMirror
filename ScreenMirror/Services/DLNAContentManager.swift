@@ -3,7 +3,10 @@ import GCDWebServer
 import MobileCoreServices
 
 class DLNAContentManager {
+    
     static let shared = DLNAContentManager()
+    
+    var currentDevice: UPPMediaRendererDevice?
     
     private var webServer: GCDWebServer?
     private var tempFiles = [URL]()
@@ -28,7 +31,7 @@ class DLNAContentManager {
     
     // MARK: - Public Methods
     
-    func sendMedia(_ mediaURL: URL, to device: UPPMediaRendererDevice, completion: @escaping (Error?) -> Void) {
+    func sendMedia(_ mediaURL: URL, completion: @escaping (Error?) -> Void) {
         let fileExtension = mediaURL.pathExtension.lowercased()
         let isVideo = ["mp4", "mov", "avi"].contains(fileExtension)
         
@@ -36,19 +39,19 @@ class DLNAContentManager {
             switch result {
             case .success(let (_, serverURL)):
                 let metadata = self?.createMetadata(for: serverURL.absoluteString, isVideo: isVideo)
-                self?.sendContent(to: device, url: serverURL.absoluteString, metadata: metadata, completion: completion)
+                self?.sendContent(url: serverURL.absoluteString, metadata: metadata, completion: completion)
             case .failure(let error):
                 completion(error)
             }
         }
     }
     
-    func sendImage(_ image: UIImage, to device: UPPMediaRendererDevice, completion: @escaping (Error?) -> Void) {
+    func sendImage(_ image: UIImage, completion: @escaping (Error?) -> Void) {
         prepareImageForSending(image) { [weak self] result in
             switch result {
             case .success(let (_, serverURL)):
                 let metadata = self?.createMetadata(for: serverURL.absoluteString, isVideo: false)
-                self?.sendContent(to: device, url: serverURL.absoluteString, metadata: metadata, completion: completion)
+                self?.sendContent(url: serverURL.absoluteString, metadata: metadata, completion: completion)
             case .failure(let error):
                 completion(error)
             }
@@ -136,10 +139,12 @@ class DLNAContentManager {
         }
     }
     
-    private func sendContent(to device: UPPMediaRendererDevice,
-                           url: String,
-                           metadata: String?,
-                           completion: @escaping (Error?) -> Void) {
+    private func sendContent(
+        url: String,
+        metadata: String?,
+        completion: @escaping (Error?) -> Void
+    ) {
+        guard let device = currentDevice else { return }
         device.avTransportService()?.setAVTransportURI(url,
                                                      currentURIMetaData: metadata,
                                                      instanceID: "0") { success, error in

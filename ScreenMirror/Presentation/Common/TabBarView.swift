@@ -211,6 +211,10 @@ final class TabBarView: UIView {
     }
 
     private func updateSelectedButton(at index: Int) {
+        
+        if index == 1 {
+            return
+        }
 
         if case let .tabItem(selectedImage, unselectedImage, _) = items[0] {
             let button = tabButtons[0]

@@ -14,7 +14,7 @@ final class TabBarController: UIViewController {
     
     private let viewControllers = [
         UINavigationController(rootViewController: HomeController()),
-        UINavigationController(rootViewController: ConnectController()),
+        UINavigationController(rootViewController: UIViewController()),
         UINavigationController(rootViewController: SettingsController())
     ]
     
@@ -73,7 +73,12 @@ extension TabBarController: TabBarViewDelegate {
     
     func tabBarView(_ tabBarView: TabBarView, didSelectItemAt index: Int) {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        let selectedViewController = viewControllers[index]
-        switchToViewController(selectedViewController)
+        
+        if index == 1 {
+            present(vc: ConnectController(), modalPresentationStyle: .fullScreen)
+        } else {
+            let selectedViewController = viewControllers[index]
+            switchToViewController(selectedViewController)
+        }
     }
 }

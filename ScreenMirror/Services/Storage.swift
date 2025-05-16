@@ -30,21 +30,4 @@ final class Storage {
     private let onboardingShownKey = "onboarding_key_dataBase"
     private let reviewShownKey = "review_key_dataBase"
     private let userActionCounterKey = "user_actions_key_dataBase"
-    
-//    func saveConnectedDevice(_ device: Device?) {
-//        let encoder = JSONEncoder()
-//        if let encoded = try? encoder.encode(device) {
-//            UserDefaults.standard.set(encoded, forKey: deviceKey)
-//        }
-//    }
-//    
-//    func restoreConnectedDevice() -> Device? {
-//        if let savedDevice = UserDefaults.standard.data(forKey: deviceKey) {
-//            let decoder = JSONDecoder()
-//            if let device = try? decoder.decode(Device.self, from: savedDevice) {
-//                return device
-//            }
-//        }
-//        return nil
-//    }
 }
