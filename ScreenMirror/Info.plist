@@ -14,8 +14,10 @@
 		<string>BeVietnamPro-ExtraBold.ttf</string>
 		<string>BeVietnamPro-Light.ttf</string>
 	</array>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Приложению нужен доступ к локальной сети для работы с мультикаст-сообщениями</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Для обнаружения телевизора в сети</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Для захвата звука с экрана</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_upnp._tcp</string>

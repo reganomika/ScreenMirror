@@ -15,7 +15,10 @@ target 'ScreenMirror' do
   pod 'CocoaUPnP'
   pod 'GCDWebServer'
 
+end
 
+target 'Broadcast' do
+  common_pods
 end
 
 post_install do |installer|

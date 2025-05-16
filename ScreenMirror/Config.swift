@@ -10,4 +10,7 @@ enum Config {
     static let appName = "Samsung Remote TV iOS App"
     static let amazonApiKey = "0987654321"
     static let debugMode = true
+    static let groupId = "group.zakhar.example.screen.mirror.broadcast"
+    static let bundle = "com.zakhar.example.screen.mirror"
+    static let extensionBundle = "com.zakhar.example.screen.mirror.Broadcast"
 }

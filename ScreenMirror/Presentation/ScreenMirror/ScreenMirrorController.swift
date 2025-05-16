@@ -157,7 +157,7 @@ class ScreenMirrorController: BaseController {
     }
     
     @objc private func start() {
-        
+        viewModel.startCast()
     }
     
     @objc private func openFAQ() {
@@ -209,7 +209,7 @@ extension ScreenMirrorController: UITableViewDataSource, UITableViewDelegate {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         
         switch viewModel.cells[indexPath.row] {
-        case .value(let type, let value):
+        case .value(let type, _):
             switch type {
             case .mirrorTo:
                 presentCrossDissolve(
