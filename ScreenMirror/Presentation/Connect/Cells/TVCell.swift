@@ -20,7 +20,7 @@ final class TVCell: UITableViewCell {
     }()
     
     private let rightImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "connected"))
+        let imageView = UIImageView(image: UIImage(named: "selection"))
         return imageView
     }()
     

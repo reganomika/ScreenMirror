@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ScreenMirror
-//
-//  Created by Zakhar Sazanavets on 29/04/2025.
-//
-
 import UIKit
 
 @main
