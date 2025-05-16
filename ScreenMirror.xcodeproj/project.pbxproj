@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7974C279C36565211E3C91 /* Pods_ScreenMirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */; };
 		340DB4F52DC0DA9F002FE7B7 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 340DB4F42DC0DA9F002FE7B7 /* SwiftUPnP */; };
 		340DB5982DC776C4002FE7B7 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 340DB5972DC776C4002FE7B7 /* SwiftUPnP */; };
 		3486CDB22DD0AB4100FADDE9 /* CustomBlurEffectView in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDB12DD0AB4100FADDE9 /* CustomBlurEffectView */; };
@@ -23,14 +22,15 @@
 		3486CDD02DD0AC0800FADDE9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDCF2DD0AC0800FADDE9 /* FirebaseCrashlytics */; };
 		3486CDD32DD0AC2900FADDE9 /* SwiftUPnP in Frameworks */ = {isa = PBXBuildFile; productRef = 3486CDD22DD0AC2900FADDE9 /* SwiftUPnP */; };
 		3486CE532DD0B68500FADDE9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3486CE512DD0B68500FADDE9 /* Localizable.strings */; };
+		E8B563138E330CD46226E168 /* Pods_ScreenMirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628B87861B68EF5D26275FE0 /* Pods_ScreenMirror.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenMirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.release.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.release.xcconfig"; sourceTree = "<group>"; };
+		20C0924307F90F4F9FEAFB7E /* Pods-ScreenMirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.debug.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.debug.xcconfig"; sourceTree = "<group>"; };
 		340DB3CF2DC0C573002FE7B7 /* ScreenMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3486CE522DD0B68500FADDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.debug.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.debug.xcconfig"; sourceTree = "<group>"; };
+		628B87861B68EF5D26275FE0 /* Pods_ScreenMirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenMirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBCE0DBFD104A79DC98314AD /* Pods-ScreenMirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenMirror.release.xcconfig"; path = "Target Support Files/Pods-ScreenMirror/Pods-ScreenMirror.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -73,13 +73,21 @@
 				3486CDB82DD0AB5500FADDE9 /* CustomNavigationView in Frameworks */,
 				3486CDCD2DD0ABE700FADDE9 /* ShadowImageButton in Frameworks */,
 				3486CDC42DD0ABAA00FADDE9 /* SnapKit in Frameworks */,
-				1C7974C279C36565211E3C91 /* Pods_ScreenMirror.framework in Frameworks */,
+				E8B563138E330CD46226E168 /* Pods_ScreenMirror.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222B5BF473487826EFC94834 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				628B87861B68EF5D26275FE0 /* Pods_ScreenMirror.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		340DB3C62DC0C573002FE7B7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +95,7 @@
 				340DB3D12DC0C573002FE7B7 /* ScreenMirror */,
 				340DB3D02DC0C573002FE7B7 /* Products */,
 				3EFE7055A4ED81019C3698C4 /* Pods */,
-				FF2352806BDA3E41E161D0C0 /* Frameworks */,
+				222B5BF473487826EFC94834 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,18 +110,10 @@
 		3EFE7055A4ED81019C3698C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */,
-				0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */,
+				20C0924307F90F4F9FEAFB7E /* Pods-ScreenMirror.debug.xcconfig */,
+				FBCE0DBFD104A79DC98314AD /* Pods-ScreenMirror.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FF2352806BDA3E41E161D0C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0B8EBA4425D229710F21D051 /* Pods_ScreenMirror.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,11 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340DB3E22DC0C574002FE7B7 /* Build configuration list for PBXNativeTarget "ScreenMirror" */;
 			buildPhases = (
-				7ACC0004633AFD0494305120 /* [CP] Check Pods Manifest.lock */,
+				2ADE4784C0BD8380DAA33AD1 /* [CP] Check Pods Manifest.lock */,
 				340DB3CB2DC0C573002FE7B7 /* Sources */,
 				340DB3CC2DC0C573002FE7B7 /* Frameworks */,
 				340DB3CD2DC0C573002FE7B7 /* Resources */,
-				89B2E6322728BA8C40BD2F35 /* [CP] Embed Pods Frameworks */,
+				8D5375DA58DF55DF9A16634A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,7 +167,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				3486CDB02DD0AB4100FADDE9 /* XCRemoteSwiftPackageReference "CustomBlurEffectView" */,
-				3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */,
+				3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 				3486CDB62DD0AB5500FADDE9 /* XCRemoteSwiftPackageReference "CustomNavigationView" */,
 				3486CDB92DD0AB7200FADDE9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				3486CDBC2DD0AB8F00FADDE9 /* XCRemoteSwiftPackageReference "PremiumManager" */,
@@ -201,7 +201,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7ACC0004633AFD0494305120 /* [CP] Check Pods Manifest.lock */ = {
+		2ADE4784C0BD8380DAA33AD1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,7 +223,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89B2E6322728BA8C40BD2F35 /* [CP] Embed Pods Frameworks */ = {
+		8D5375DA58DF55DF9A16634A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,7 +266,7 @@
 /* Begin XCBuildConfiguration section */
 		340DB3E32DC0C574002FE7B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6BA90CB6D3566C9394ACFA5 /* Pods-ScreenMirror.debug.xcconfig */;
+			baseConfigurationReference = 20C0924307F90F4F9FEAFB7E /* Pods-ScreenMirror.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,7 +303,7 @@
 		};
 		340DB3E42DC0C574002FE7B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BCEC10FF4A65E1A61E804C4 /* Pods-ScreenMirror.release.xcconfig */;
+			baseConfigurationReference = FBCE0DBFD104A79DC98314AD /* Pods-ScreenMirror.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -508,7 +508,7 @@
 				minimumVersion = 0.0.3;
 			};
 		};
-		3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+		3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
 			requirement = {
@@ -616,7 +616,7 @@
 		};
 		3486CDB42DD0AB4A00FADDE9 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability" */;
+			package = 3486CDB32DD0AB4A00FADDE9 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
 			productName = Reachability;
 		};
 		3486CDB72DD0AB5500FADDE9 /* CustomNavigationView */ = {

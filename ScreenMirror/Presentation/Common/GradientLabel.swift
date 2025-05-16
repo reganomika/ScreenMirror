@@ -23,7 +23,7 @@ class GradientLabel: UIStackView {
         self.endPoint = endPoint
         super.init(frame: .zero)
         setupView()
-        self.gradientColors = Config.defaultDradient
+        self.gradientColors =  [UIColor(hex: "#FF8350"), UIColor(hex: "#FF2227")]
     }
 
     required init(coder: NSCoder) {
@@ -31,7 +31,7 @@ class GradientLabel: UIStackView {
         self.endPoint = CGPoint(x: 1.0, y: 0.5)
         super.init(coder: coder)
         setupView()
-        self.gradientColors = Config.defaultDradient
+        self.gradientColors =  [UIColor(hex: "#FF8350"), UIColor(hex: "#FF2227")]
     }
 
     private func setupView() {
@@ -45,7 +45,7 @@ class GradientLabel: UIStackView {
         applyGradientOrColor()
     }
 
-    func setLabelColor(colors: [UIColor]? = Config.defaultDradient, plainColor: UIColor? = nil) {
+    func setLabelColor(colors: [UIColor]? =  [UIColor(hex: "#FF8350"), UIColor(hex: "#FF2227")], plainColor: UIColor? = nil) {
         if let plainColor = plainColor {
             self.plainColor = plainColor
             self.gradientColors = nil
